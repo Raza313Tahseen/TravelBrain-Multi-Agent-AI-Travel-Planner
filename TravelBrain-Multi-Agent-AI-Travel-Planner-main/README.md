@@ -135,6 +135,3 @@ LICENSE                 GNU GPL-3.0 license
 
 The Windows application has been started locally by the project maintainer. The Docker Compose configuration parses successfully. A Render deployment and a complete end-to-end hosted API workflow have not been verified yet. No automated test suite is currently included in the repository.
 
-## Attribution and license
-
-TravelBrain is based on the [original project by Kalyan M45](https://github.com/KalyanM45/TravelBrain-Multi-Agent-AI-Travel-Planner) and is distributed under the GNU GPL-3.0 license; the license text is included in [LICENSE](LICENSE). This repository's documented contributions are the Windows setup and Render deployment guidance, README updates, and additional secret/private-data ignore rules. Keep future project descriptions clear about which parts you implement or modify.
