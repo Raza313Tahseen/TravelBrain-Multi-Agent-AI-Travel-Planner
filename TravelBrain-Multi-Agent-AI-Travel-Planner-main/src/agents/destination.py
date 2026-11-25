@@ -2,7 +2,7 @@
 
 from src.agents.prompts import DESTINATION_EXTRACTION_PROMPT
 from src.clients.cache import cached
-from src.clients.llm import get_llm
+from src.clients.llm import invoke_llm
 from src.config.settings import CACHE_TTL_DESTINATION
 
 
@@ -15,6 +15,6 @@ def extract_destination(query: str) -> str:
 
     prompt = DESTINATION_EXTRACTION_PROMPT.format(query=query)
 
-    response = get_llm().invoke(prompt)
+    response = invoke_llm(prompt, max_tokens=100)
 
     return response.content.strip()

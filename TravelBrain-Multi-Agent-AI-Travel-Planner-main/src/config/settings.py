@@ -46,6 +46,11 @@ OPENWEATHER_API_KEY = os.getenv("OPENWEATHER_API_KEY")
 #   GET https://api.groq.com/openai/v1/models
 # if this ever starts returning model_not_found again.
 GROQ_MODEL = os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
+# Explicit completion caps prevent SDK/model defaults from requesting the
+# model's full output window (which can exceed the account's TPM budget).
+GROQ_MAX_COMPLETION_TOKENS = int(os.getenv("GROQ_MAX_COMPLETION_TOKENS", "2000"))
+GROQ_MAX_RETRIES = int(os.getenv("GROQ_MAX_RETRIES", "3"))
+GROQ_RETRY_BASE_SECONDS = float(os.getenv("GROQ_RETRY_BASE_SECONDS", "1"))
 
 
 # =========================
